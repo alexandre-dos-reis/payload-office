@@ -15,6 +15,12 @@ export default buildConfig({
   serverURL: process.env.SERVER_URL,
   admin: {
     user: Users.slug,
+    components: {
+      graphics: {
+        Logo: () => null,
+        Icon: () => null,
+      },
+    },
   },
   collections: [Modules, Contacts, Users, Media],
   editor: lexicalEditor(),

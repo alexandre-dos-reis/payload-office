@@ -49,9 +49,8 @@ export interface UserAuthOperations {
  */
 export interface Module {
   id: string;
-  pictures?: (string | Media)[] | null;
-  onSale?: boolean | null;
-  Manufacturer:
+  status?: ('isSold' | 'onSale') | null;
+  manufacturer:
     | '2hp'
     | 'ACL'
     | 'ALM Busy Circuits'
@@ -79,12 +78,12 @@ export interface Module {
     | 'Verbos Electronics'
     | 'Xaox Devices';
   name: string;
+  pictures?: (string | Media)[] | null;
   firstOwner?: boolean | null;
   boxIncluded?: boolean | null;
+  rackRash?: boolean | null;
   price: number;
   condition?: ('like new' | 'good' | 'used' | 'few scratches' | 'bad') | null;
-  rackRash?: boolean | null;
-  isSold?: boolean | null;
   comments?: string | null;
   ShipTo?: string | null;
   trackingNumber?: string | null;
