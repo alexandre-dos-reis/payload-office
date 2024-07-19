@@ -5,6 +5,9 @@ export const Modules: CollectionConfig = {
   access: {
     read: () => true,
   },
+  admin: {
+    useAsTitle: 'name',
+  },
   fields: [
     {
       type: 'tabs',
